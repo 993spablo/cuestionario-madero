@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cuestionario de Estilos de Aprendizaje - Madero</title>
+  <link rel="stylesheet" href="styles.css">
+  <!-- Chart.js para el gráfico hexagonal de araña -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <!-- Supabase JS Client -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="logo-container">
+      <img src="logo.png" alt="Madero Restaurante Logo" class="logo">
+    </div>
+    <button id="adminBtn" class="btn-secondary">Panel Administrador</button>
+  </header>
+
+  <main class="container">
+    <!-- Seccion del Cuestionario -->
+    <section id="quizSection" class="card">
+      <h2>Cuestionario de Estilos de Aprendizaje</h2>
+      <p class="instructions">Instrucciones: Selecciona la opción que mejor describa cómo reaccionas habitualmente.</p>
+
+      <form id="quizForm">
+        <div class="user-info">
+          <label for="userName"><strong>Tu Nombre Completo:</strong></label>
+          <input type="text" id="userName" required placeholder="Ingresa tu nombre para guardar tus resultados">
+        </div>
+        <hr>
+        <div id="questionsContainer"></div>
+        <button type="submit" class="btn-primary">Finalizar y Ver Mi Perfil</button>
+      </form>
+    </section>
+
+    <!-- Seccion de Resultados -->
+    <section id="resultSection" class="card hidden">
+      <h2>Tu Perfil de Aprendizaje Madero</h2>
+      
+      <div class="chart-container">
+        <canvas id="radarChart"></canvas>
+      </div>
+
+      <div id="resultsSummary" class="results-grid"></div>
+
+      <div class="course-cta">
+        <h3 id="predominantTitle"></h3>
+        <p id="predominantDesc"></p>
+        <a id="courseLink" href="#" target="_blank" class="btn-primary btn-large">EMPEZAR MIS CURSOS DE CAPACITACIÓN</a>
+      </div>
+    </section>
+
+    <!-- Seccion del Administrador -->
+    <section id="adminSection" class="card hidden">
+      <div class="admin-header">
+        <h2>Panel de Administración</h2>
+        <button id="closeAdminBtn" class="btn-secondary">Volver al Cuestionario</button>
+      </div>
+
+      <div id="adminAuth" class="auth-box">
+        <label for="adminPass">Clave de Acceso Administrador:</label>
+        <input type="password" id="adminPass" placeholder="Ingresa la contraseña">
+        <button id="loginAdminBtn" class="btn-primary">Ingresar</button>
+      </div>
+
+      <div id="adminContent" class="hidden">
+        <h3>Resultados Registrados de los Usuarios</h3>
+        <div class="table-responsive">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Fecha</th>
+                <th>Nombre</th>
+                <th>Estilo Predominante</th>
+                <th>Desglose (%)</th>
+                <th>Estrategia Docente (Cómo Enseñarle)</th>
+              </tr>
+            </thead>
+            <tbody id="adminTableBody"></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
