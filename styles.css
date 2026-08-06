@@ -18,13 +18,16 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 30px;
-  background-color: #1f1c1a;
+  padding: 10px 30px;
+  background-color: #1f1b18;
   box-shadow: 0 2px 5px rgba(0,0,0,0.3);
 }
 
 .logo {
-  max-height: 60px;
+  max-height: 50px;
+  width: auto;
+  border-radius: 6px;
+  object-fit: contain;
 }
 
 .container {
