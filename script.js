@@ -69,6 +69,8 @@ preguntas.forEach(q => {
 document.getElementById("quizForm").addEventListener("submit", async (e) => {
   e.preventDefault();
   const name = document.getElementById("userName").value;
+  const nombreUsuario = document.getElementById("userName").value.trim() || "Anónimo";
+const nominaUsuario = document.getElementById("userNomina").value.trim() || "0";
   const counts = { A:0, B:0, C:0, D:0, E:0, F:0 };
 
   for (let i = 1; i <= 18; i++) {
@@ -97,6 +99,7 @@ document.getElementById("quizForm").addEventListener("submit", async (e) => {
   // Guardar en Supabase
   await supabaseClient.from('resultados_aprendizaje').insert([{
     nombre_usuario: name,
+    numero_nomina: nominaUsuario,
     ejecucion_directa: percentages["Ejecución Directa"],
     simulacion_escenario: percentages["Simulación y Escenario"],
     analitico_precision: percentages["Analítico de Precisión"],
@@ -175,6 +178,7 @@ document.getElementById("loginAdminBtn").addEventListener("click", async () => {
         tbody.innerHTML += `
           <tr>
             <td>${new Date(row.fecha).toLocaleDateString()}</td>
+            <td>${row.numero_nomina || '0'}</td>
             <td>${row.nombre_usuario}</td>
             <td><strong>${row.estilo_predominante}</strong></td>
             <td>A:${row.ejecucion_directa}% | B:${row.simulacion_escenario}% | C:${row.analitico_precision}% | D:${row.reactivo_presion}% | E:${row.estructural_sistematico}% | F:${row.autonomo_creativo}%</td>
