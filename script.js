@@ -27,26 +27,223 @@ const guiaEnsenanza = {
 };
 
 const preguntas = [
-  { n: 1, text: "Cuando te enfrentas a un aparato o software totalmente nuevo, ¿qué haces primero?", opts: { A: "Empiezas a tocar botones o usarlo de inmediato.", B: "Buscas a alguien que te explique o conversas sobre ello.", C: "Lees el manual detalladamente o buscas especificaciones.", D: "Buscas una guía rápida de 3 pasos.", E: "Analizas el diagrama de flujo o estructura lógica.", F: "Exploras por tu cuenta probando caminos no convencionales." } },
-  { n: 2, text: "Si debes resolver un problema complejo en equipo, tu contribución principal es:", opts: { A: "Pasar a la acción inmediata sobre el terreno.", B: "Facilitar el debate y moderar la comunicación.", C: "Analizar los datos antecedentes con rigor lógico.", D: "Dar órdenes claras para solucionar la urgencia ya.", E: "Diseñar el plan metodológico y el cronograma.", F: "Proponer una alternativa totalmente disruptiva." } },
-  { n: 3, text: "¿Cómo prefieres recibir capacitación o adquirir una nueva habilidad?", opts: { A: "Ejercicios prácticos manipulando elementos reales.", B: "Dinámicas de grupo, juegos de roles y debates.", C: "Estudiando gráficos, cuadros y manuales legibles.", D: "Instrucciones breves y directas enfocado en imprevistos.", E: "Esquemas jerárquicos y mapa de todo el sistema.", F: "Estudio autodidacta y exploración a tu ritmo." } },
-  { n: 4, text: "Cuando estás bajo una situación de límite de tiempo o alta exigencia, tú:", opts: { A: "Confías en tu memoria muscular e instinto práctico.", B: "Adaptas tu discurso a las personas requeridas.", C: "Verificas dos veces los datos para evitar errores.", D: "Tomas decisiones drásticas e inmediatas.", E: "Creas una lista de comprobación de emergencia.", F: "Te aíslas un momento para hallar una idea propia." } },
-  { n: 5, text: "¿Qué tipo de información retienes con mayor facilidad?", opts: { A: "La que experimentaste físicamente con tus manos.", B: "Historias, conversaciones y debates en los que participaste.", C: "Cifras exactas, argumentos lógicos y lecturas.", D: "Indicaciones cortas y de utilidad inmediata.", E: "Modelos conceptuales y relaciones causa-efecto.", F: "Ideas abstractas o hallazgos por investigación propia." } },
-  { n: 6, text: "Cuando alguien te da explicaciones teóricas muy extensas, tu reacción suele ser:", opts: { A: "Impacientarte; necesitas moverte o probarlo.", B: "Interrumpir para hacer preguntas o dramatizar.", C: "Tomar notas minuciosas para verificar la lógica.", D: "Pedir que vayan al punto principal exactamente.", E: "Encajar la teoría en un marco conceptual amplio.", F: "Desconectarte mentalmente para imaginar alternativas." } },
-  { n: 7, text: "¿Cuál es tu herramienta favorita para organizar tus tareas pendientes?", opts: { A: "Iniciar de inmediato con lo primero en frente.", B: "Comentar tareas con otros para priorizar compromisos.", C: "Una hoja de cálculo detallada con parámetros exactos.", D: "Una lista muy corta con lo urgente del día.", E: "Una matriz con categorías y listas de comprobación.", F: "Un cuaderno libre combinando esquemas y bocetos." } },
-  { n: 8, text: "Si tienes que enseñar a otra persona a realizar una tarea, tú:", opts: { A: "Le pides que tome las herramientas y lo haga guiándola.", B: "Haces una simulación y dialogas sobre escenarios.", C: "Le entregas un documento de procedimientos y fundamentos.", D: "Le muestras en 30 segundos y pides que lo repita.", E: "Le explicas cómo funciona todo el sistema primero.", F: "Le das las pautas y permites que halle su estilo." } },
-  { n: 9, text: "¿Qué ambiente te resulta más cómodo para trabajar o estudiar?", opts: { A: "Entorno dinámico con libertad de movimiento físico.", B: "Espacio social con constante intercambio comunicativo.", C: "Lugar silencioso para analizar datos sin distracción.", D: "Ambiente acelerado con metas inmediatas que resolver.", E: "Entorno estructurado y con procesos definidos.", F: "Espacio autónomo sin interferencias a tu creatividad." } },
-  { n: 10, text: "Ante un cambio imprevisto en los planes, tu actitud inicial es:", opts: { A: "Adaptarte al instante probando sobre la marcha.", B: "Evaluar el comportamiento de otros y ajustar tu rol.", C: "Detenerte a analizar las causas y consecuencias.", D: "Reaccionar rápido tomando el camino más corto.", E: "Ajustar el sistema general reestructurando el plan.", F: "Ver la interrupción como oportunidad para inventar algo." } },
-  { n: 11, text: "¿Cuál de estas frases describe mejor tu filosofía personal al aprender?", opts: { A: "La práctica hace al maestro; prefiero hacer que teorizar.", B: "El conocimiento se construye en la interacción con otros.", C: "Sin datos, evidencia y lógica no hay aprendizaje.", D: "Lo bueno y breve, dos veces bueno; importa el resultado.", E: "Para dominar una parte hay que comprender la totalidad.", F: "Cuestiona las reglas y busca tu propio camino." } },
-  { n: 12, text: "Al momento de tomar una decisión importante, te basas principalmente en:", opts: { A: "La experiencia previa práctica al ejecutarla.", B: "El impacto interpersonal y la comunicación.", C: "Evaluación objetiva de pros y contras respaldada en datos.", D: "La rapidez con la que se obtendrán los resultados.", E: "La coherencia con tus reglas y modelos estructurales.", F: "Tu intuición profunda, visión y autonomía." } },
-  { n: 13, text: "¿Qué tipo de lecturas o contenidos prefieres consumir?", opts: { A: "Guías prácticas y tutoriales de hazlo tú mismo.", B: "Casos de estudio interpersonales o debates.", C: "Reportes técnicos, ensayos analíticos y estadísticas.", D: "Resúmenes ejecutivos y síntesis de alto impacto.", E: "Manuales metodológicos y arquitectura de procesos.", F: "Contenidos sobre innovación y filosofía disruptiva." } },
-  { n: 14, text: "Cuando cometes un error durante un proceso, tu reacción es:", opts: { A: "Corregirlo al instante mediante ensayo y error.", B: "Conversar sobre lo sucedido para entender reacciones.", C: "Rastrear el punto exacto del fallo lógico.", D: "Minimizar el detalle, solucionar urgente y seguir.", E: "Modificar el procedimiento para blindar el sistema.", F: "Reflexionar a solas para hallar una perspectiva inédita." } },
-  { n: 15, text: "En un proyecto, ¿cuál de las siguientes actividades te genera mayor satisfacción?", opts: { A: "La fase de ejecución en terreno.", B: "Las reuniones de presentación o dinámicas de grupo.", C: "La fase de auditoría y análisis de calidad.", D: "Resolver crisis imprevistas en tiempo récord.", E: "El diseño de la arquitectura del proyecto y flujogramas.", F: "El diseño de soluciones creativas no resueltas antes." } },
-  { n: 16, text: "¿Cómo te defines en cuanto a tu estilo de trabajo?", opts: { A: "Práctico, activo y orientado a la acción inmediata.", B: "Expresivo, comunicativo y adaptable al entorno.", C: "Lógico, observador, cauteloso y metódico.", D: "Directo, impaciente con detalles y enfocado en metas.", E: "Sistemático, estructurado y organizador.", F: "Autónomo, visionario e independiente." } },
-  { n: 17, text: "¿Qué te causa mayor frustración al momento de aprender o trabajar?", opts: { A: "Estar sentado escuchando teoría sin poder hacer nada.", B: "Trabajar en aislamiento total sin intercambiar ideas.", C: "La falta de rigor e improvisación sin datos.", D: "Rodeos, burocracia y reuniones sin decisiones.", E: "El desorden, caos y falta de un método claro.", F: "Que te impongan reglas rígidas que limiten tu libertad." } },
-  { n: 18, text: "Al evaluar el éxito de una capacitación, el indicador más importante es:", opts: { A: "Haber adquirido una destreza práctica para aplicar hoy.", B: "Haber mejorado tu capacidad de comunicar e influir.", C: "Haber comprendido los datos y fundamentos.", D: "Haber obtenido herramientas concretas que ahorren tiempo.", E: "Tener un marco conceptual claro de todo el conocimiento.", F: "Haber descubierto nuevas perspectivas de desarrollo." } }
+  {
+    n: 1,
+    text: "Cuando te entregan una herramienta o equipo nuevo que no conoces, ¿qué haces primero?",
+    opts: {
+      A: "Empiezas a probarlo de una vez para ver cómo funciona.",
+      B: "Le pides a un compañero que te explique cómo se usa.",
+      C: "Lees las instrucciones completas antes de encenderlo o moverlo.",
+      D: "Pides que te digan rápido los pasos básicos para ponerlo a trabajar de inmediato.",
+      E: "Observas cómo está armado y cómo funciona cada una de sus partes.",
+      F: "Buscas por tu cuenta una forma distinta de usarlo que no venga en las instrucciones."
+    }
+  },
+  {
+    n: 2,
+    text: "Si surge un problema en el trabajo y deben resolverlo en equipo, ¿cómo ayudas mejor?",
+    opts: {
+      A: "Poniendo manos a la obra de inmediato para avanzar con el trabajo físico.",
+      B: "Platicando con el grupo para ponernos de acuerdo y repartir las tareas.",
+      C: "Analizando bien qué provocó el fallo antes de dar una opinión.",
+      D: "Tomando decisiones rápidas para solucionar lo más urgente sin perder tiempo.",
+      E: "Organizando los pasos y el orden exacto en que van a trabajar.",
+      F: "Proponiendo una solución diferente que a nadie más se le había ocurrido."
+    }
+  },
+  {
+    n: 3,
+    text: "¿De qué manera aprendes mejor cuando te enseñan algo nuevo?",
+    opts: {
+      A: "Practicando tú mismo desde el primer momento.",
+      B: "Mediante pláticas en grupo, ejemplos prácticos y dinámicas con tus compañeros.",
+      C: "Viendo imágenes, listas sencillas y explicaciones paso a paso.",
+      D: "Con explicaciones breves y directas sobre cómo resolver el trabajo.",
+      E: "Conociendo todo el proceso de inicio a fin para entender el proceso completo.",
+      F: "Explorando tú solo a tu propio ritmo, sin presión."
+    }
+  },
+  {
+    n: 4,
+    text: "Cuando hay mucha carga de trabajo y poco tiempo para entregar, tú generalmente:",
+    opts: {
+      A: "Te apoyas en lo que ya sabes hacer con la práctica y trabajas a buen ritmo.",
+      B: "Platicas con el equipo para acomodarse bien y mantener el control.",
+      C: "Revisas las tareas dos veces para evitar cometer equivocaciones.",
+      D: "Tomas decisiones al instante para resolver lo más urgente de inmediato.",
+      E: "Haces una lista de pendientes para ir tachando lo que vas terminando.",
+      F: "Te concentras a solas un momento para pensar cómo resolverlo a tu manera."
+    }
+  },
+  {
+    n: 5,
+    text: "¿Qué tipo de información recuerdas con mayor facilidad?",
+    opts: {
+      A: "Las actividades que realizaste tú mismo con la práctica.",
+      B: "Las conversaciones, explicaciones o consejos que te compartieron tus compañeros.",
+      C: "Las reglas, los datos exactos y la información por escrito.",
+      D: "Las indicaciones cortas y los consejos prácticos para el momento.",
+      E: "El orden completo de un proceso, desde el principio hasta el final.",
+      F: "Las ideas o soluciones nuevas que descubriste por tu cuenta."
+    }
+  },
+  {
+    n: 6,
+    text: "Cuando alguien te da una explicación muy larga y teórica, ¿cuál es tu reacción?",
+    opts: {
+      A: "Te impacientas porque prefieres empezar a practicar.",
+      B: "Interrumpes con preguntas para hacer la explicación más platicada.",
+      C: "Tomas notas con cuidado para revisar si la información es correcta.",
+      D: "Pides que vayan al punto principal y te digan exactamente qué hacer.",
+      E: "Tratas de acomodar la información dentro de los procesos que ya conoces.",
+      F: "Te distraes pensando en tus propias ideas o en otras formas de hacerlo."
+    }
+  },
+  {
+    n: 7,
+    text: "¿Cómo prefieres organizar las tareas de tu día?",
+    opts: {
+      A: "Realizando directamente la primera tarea que tienes enfrente hasta terminarla.",
+      B: "Hablando con tus compañeros para definir qué es lo más importante.",
+      C: "Anotando todo en una libreta con horarios y detalles claros.",
+      D: "Anotando únicamente los 2 o 3 pendientes más urgentes del turno.",
+      E: "Utilizando una lista ordenada por pasos o niveles de importancia.",
+      F: "Anotando a tu estilo, con esquemas, notas o guías propias."
+    }
+  },
+  {
+    n: 8,
+    text: "Si debes capacitar a un compañero nuevo, ¿cómo le enseñas?",
+    opts: {
+      A: "Le entregas las herramientas y lo vas guiando mientras él realiza el trabajo.",
+      B: "Realizan un ejemplo simulado y platican sobre cómo resolver distintos problemas.",
+      C: "Le entregas una guía escrita y le explicas el motivo de cada paso.",
+      D: "Le muestras cómo se hace en medio minuto y le pides que lo repita.",
+      E: "Le explicas primero cómo funciona todo el trabajo para que entienda el orden.",
+      F: "Le das las indicaciones generales y le permites encontrar su propia forma de trabajar."
+    }
+  },
+  {
+    n: 9,
+    text: "¿En qué tipo de ambiente te sientes más cómodo trabajando?",
+    opts: {
+      A: "En un espacio donde haya actividad constante y libertad de movimiento.",
+      B: "En un ambiente con convivencia constante y comunicación entre compañeros.",
+      C: "En un lugar tranquilo donde puedas concentrarte sin distracciones.",
+      D: "En un ambiente dinámico donde se cumplan las metas con rapidez.",
+      E: "En un espacio ordenado, donde las reglas y procesos estén bien definidos.",
+      F: "En un entorno donde te permitan trabajar de forma independiente."
+    }
+  },
+  {
+    n: 10,
+    text: "Si a mitad de la jornada cambia la forma de realizar el trabajo, ¿qué haces?",
+    opts: {
+      A: "Te adaptas rápidamente y vas aprendiendo los cambios sobre la marcha.",
+      B: "Observas cómo reacciona el grupo y te organizas con ellos.",
+      C: "Te detienes a revisar el motivo del cambio y lo que podría fallar.",
+      D: "Actúas con rapidez tomando la opción más directa para terminar a tiempo.",
+      E: "Reorganizas tus tareas para mantener el orden y el control.",
+      F: "Aprovechas el cambio para proponer una forma más práctica de trabajar."
+    }
+  },
+  {
+    n: 11,
+    text: "¿Cuál de estas frases se relaciona mejor con tu forma de pensar en el trabajo?",
+    opts: {
+      A: "\"La práctica hace al maestro; es mejor hacer que solo hablar.\"",
+      B: "\"El trabajo sale mejor cuando hay buena comunicación en el equipo.\"",
+      C: "\"Para hacer bien las cosas hay que seguir las instrucciones y cuidar los detalles.\"",
+      D: "\"Lo breve y directo es mejor; lo importante es entregar resultados.\"",
+      E: "\"Es necesario entender todo lo que se hace antes de cambiar algo.\"",
+      F: "\"No siempre hay que seguir el mismo camino; se pueden buscar nuevas opciones.\""
+    }
+  },
+  {
+    n: 12,
+    text: "Al tomar una decisión importante en tu turno, te basas principalmente en:",
+    opts: {
+      A: "La experiencia que has adquirido al realizar tareas similares anteriormente.",
+      B: "El impacto que tendrá en el equipo y lo que conversaste con ellos.",
+      C: "Analizar las ventajas y desventajas con la información disponible.",
+      D: "La opción que brinde el resultado más rápido y efectivo.",
+      E: "Lo que establecen las reglas y los procedimientos de la empresa.",
+      F: "Tu intuición o una idea propia que consideras que funcionará."
+    }
+  },
+  {
+    n: 13,
+    text: "Si te entregan material de lectura o videos para capacitarte, prefieres:",
+    opts: {
+      A: "Guías prácticas con imágenes paso a paso.",
+      B: "Ejemplos de casos reales platicados por otros compañeros.",
+      C: "Tarjetas con datos precisos y explicaciones claras.",
+      D: "Hojas breves de una sola página con los puntos más importantes.",
+      E: "Guías completas con tablas y la secuencia de los pasos.",
+      F: "Información sobre ideas innovadoras o formas distintas de trabajar."
+    }
+  },
+  {
+    n: 14,
+    text: "Cuando cometes un error durante el trabajo, tu primera reacción es:",
+    opts: {
+      A: "Corregirlo en el momento intentando otra forma de hacerlo con la práctica.",
+      B: "Comentarlo con tu compañero o encargado para acordar cómo solucionarlo.",
+      C: "Identificar exactamente en qué paso estuvo la falla para que no vuelva a ocurrir.",
+      D: "Resolverlo rápidamente para continuar con tus actividades sin detenerte.",
+      E: "Consultar lo que hay que hacer para asegurarte de seguir el orden correcto.",
+      F: "Reflexionar a solas sobre lo sucedido para comprender la causa y aprender de ello."
+    }
+  },
+  {
+    n: 15,
+    text: "¿Qué momento de tu jornada de trabajo te brinda mayor satisfacción?",
+    opts: {
+      A: "Estar en actividad constante realizando el trabajo práctico.",
+      B: "Las reuniones de equipo, la cooperación y la atención a las personas.",
+      C: "Comprobar que el trabajo quedó bien hecho y sin errores de calidad.",
+      D: "Resolver imprevistos o situaciones difíciles en poco tiempo.",
+      E: "Dejar el área limpia, ordenada y con los pasos bien organizados.",
+      F: "Encontrar un método nuevo que facilite o mejore la tarea."
+    }
+  },
+  {
+    n: 16,
+    text: "¿Cómo te defines como trabajador?",
+    opts: {
+      A: "Práctico, activo y enfocado en la acción constante.",
+      B: "Comunicativo, accesible y con facilidad para relacionarte con el equipo.",
+      C: "Observador, precavido y atento a los detalles.",
+      D: "Directo, enfocado en las metas y sin rodeos.",
+      E: "Ordenado, disciplinado y constante con los procedimientos.",
+      F: "Independiente, creativo y con iniciativa para proponer ideas."
+    }
+  },
+  {
+    n: 17,
+    text: "¿Qué es lo que más te aburre o molesta durante una capacitación?",
+    opts: {
+      A: "Permanecer sentado escuchando explicaciones sin realizar ejercicios prácticos.",
+      B: "Estar aislado leyendo sin posibilidad de comentar el tema con otros.",
+      C: "Que la información se entregue en desorden o sin datos claros.",
+      D: "Las explicaciones demasiado largas que no llegan a conclusiones útiles.",
+      E: "La falta de organización, el desorden o saltarse pasos del proceso.",
+      F: "Que te impongan una sola forma de trabajar sin dar espacio a sugerencias."
+    }
+  },
+  {
+    n: 18,
+    text: "¿Cuándo consideras que una capacitación fue verdaderamente útil?",
+    opts: {
+      A: "Cuando aprendiste una técnica fácil que puedes aplicar desde hoy.",
+      B: "Cuando te ayudó a mejorar la comunicación y el trabajo con otras personas.",
+      C: "Cuando comprendiste con claridad las razones detrás del trabajo.",
+      D: "Cuando obtuviste soluciones rápidas que te ayudan a ahorrar tiempo.",
+      E: "Cuando te quedó claro el orden y la secuencia de todos los pasos.",
+      F: "Cuando te aportó ideas nuevas para mejorar tu desempeño de forma autónoma."
+    }
+  }
 ];
-
 // RENDERIZAR PREGUNTAS
 const container = document.getElementById("questionsContainer");
 preguntas.forEach(q => {
