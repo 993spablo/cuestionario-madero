@@ -388,3 +388,40 @@ document.getElementById("loginAdminBtn").addEventListener("click", async () => {
     alert("Contraseña incorrecta");
   }
 });
+// EVENTO PARA DESCARGAR DATOS EN FORMATO EXCEL (CSV)
+document.getElementById("downloadCsvBtn").addEventListener("click", async () => {
+  const { data, error } = await supabaseClient
+    .from('resultados_aprendizaje')
+    .select('*')
+    .order('fecha', { ascending: false });
+
+  if (error || !data || data.length === 0) {
+    alert("No hay datos disponibles para descargar.");
+    return;
+  }
+
+  // Encabezados de las columnas para el Excel
+  let csvContent = "\uFEFF"; // BOM para asegurar caracteres en español (acentos, ñ)
+  csvContent += "Fecha,Número de Nómina,Nombre,Estilo Predominante,Ejecución Directa (%),Simulación y Escenario (%),Analítico de Precisión (%),Reactivo de Alta Presión (%),Estructural y Sistemático (%),Autónomo Creativo (%)\n";
+
+  // Filas con los datos de cada persona
+  data.forEach(row => {
+    const fecha = new Date(row.fecha).toLocaleDateString();
+    const nomina = `"${row.numero_nomina || '0'}"`;
+    const nombre = `"${(row.nombre_usuario || '').replace(/"/g, '""')}"`;
+    const estilo = `"${row.estilo_predominante || ''}"`;
+    
+    csvContent += `${fecha},${nomina},${nombre},${estilo},${row.ejecucion_directa || 0},${row.simulacion_escenario || 0},${row.analitico_precision || 0},${row.reactivo_presion || 0},${row.estructural_sistematico || 0},${row.autonomo_creativo || 0}\n`;
+  });
+
+  // Generar archivo para descarga
+  const blob = new Blob([csvContent], { type: "text/csv;charset=utf-8;" });
+  const url = URL.createObjectURL(blob);
+  const link = document.createElement("a");
+  
+  link.setAttribute("href", url);
+  link.setAttribute("download", `Resultados_Estilos_Aprendizaje_${new Date().toISOString().slice(0,10)}.csv`);
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+});
